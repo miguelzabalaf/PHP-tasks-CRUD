@@ -1,0 +1,237 @@
+.container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container h5 {
+    color: #949494;
+}
+
+/* -----------------------FORM------------------- */
+.container__form {
+    position: absolute;
+    border: 1.2px solid rgb(0, 127, 218);
+    width: 300px;
+    flex-shrink: 1;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+
+.container__form--title {
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid rgba(51, 51, 51, 0.5);
+    margin-bottom: 10px;
+
+    background-color: rgb(250, 250, 250);
+}
+
+.container__form--description {
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid rgba(51, 51, 51, 0.5);
+    margin-bottom: 10px;
+    background-color: rgb(250, 250, 250);
+    resize: none;
+}
+
+/* -----------------------FORM END------------------- */
+
+
+/* -----------------------TASK------------------- */
+
+.container__tasks {
+    position: absolute;
+    right: 0;
+    border: 1.2px solid rgb(0, 127, 218);
+    width: 500px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    justify-content: space-between;
+}
+
+.task {
+    width: 220px;
+    min-height: 120px;
+    padding: 10px;
+    border: 1px solid rgb(0, 127, 218);
+    border-radius: 5px;
+    background-color: white;
+    margin: 5px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+.task__container {
+    height: 100%;
+    position: relative;
+}
+
+.task__title {
+    color: rgb(0, 127, 218);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+    
+}
+
+.task__description {
+    font-size: 13px;
+    color: gray;
+    margin-bottom: 30px;
+}
+
+.task__timestamp {
+    font-size: 13px;
+    background-color: rgb(0, 127, 218);
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+}
+
+.task__options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.5px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: right;
+    transform: translateX(400%);
+
+}
+
+.task__options  * {
+    margin-top: 12px;
+}
+
+
+.task__options__edit a {
+    transform: translateX(400%);
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: rgba(255, 179, 0, 0.35);
+    color: rgb(255, 179, 0);
+}
+
+.task__options__edit:hover a {
+    color: rgba(255, 255, 255, 0.75);
+    background-color: rgb(255, 179, 0);
+}
+
+
+.task:hover {
+    border-left: 5px solid rgb(0, 127, 218);
+    
+}
+.task__options__delete a {
+    transform: translateX(400%);
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: rgba(177, 0, 0, 0.35);
+    color: rgb(177, 0, 0);
+}
+
+.task__options__delete:hover a {
+    color: rgba(255, 255, 255, 0.75);
+    background-color: rgb(177, 0, 0);
+}
+
+.task:hover .task__container{
+    filter: blur(2.5px);
+}
+
+.task:hover .task__options{
+    transform: translateX(0);
+}
+
+/* -----------------------TASK END------------------- */
+
+
+/* -----------------------BUTTON------------------- */
+.button {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.button--button {
+    padding: 5px 15px;
+    background-color: rgb(0, 127, 218);
+    color: whitesmoke;
+    border: 1.2px solid rgb(0, 101, 173);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button--button:hover {
+    background-color: rgb(0, 101, 173);
+}
+/* -----------------------BUTTON END------------------- */
+
+
+
+@media screen and (max-width: 861px) {
+    .container__form {
+        width: 100%;
+        position: static;
+    }
+    .container__tasks {
+        width: 100%;
+        position: static;
+    }
+    
+
+}
+
+@media screen and (max-width: 620px) {
+    .button {
+        justify-content: center;
+    }
+    .button--button {
+        padding: 5px 15px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .container__form--title {
+        padding: 10px;
+    }
+    .container__form--description {
+        padding: 10px;
+    }
+    .task {
+        width: 98%;
+    }
+}
+
+@media screen and (min-width: 621px) and (max-width: 752px) {
+    .task {
+        width: 45%;
+    }
+}
